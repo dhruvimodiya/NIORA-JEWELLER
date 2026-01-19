@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAF9F6;
+  color: #111111;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tab styling */
+.active-tab {
+  color: #D50032;
+  border-bottom: 2px solid #D50032;
+}
+
+.tab-btn {
+  border-bottom: 2px solid transparent;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded hover:bg-secondary transition-all duration-300 font-medium;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded hover:bg-primary hover:text-white transition-all duration-300 font-medium;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-lightGray rounded focus:outline-none focus:border-primary transition-colors;
+  }
+  
+  .card-shadow {
+    @apply shadow-md hover:shadow-xl transition-shadow duration-300;
+  }
+}
+
